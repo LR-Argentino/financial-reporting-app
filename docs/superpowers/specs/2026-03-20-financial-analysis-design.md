@@ -8,7 +8,7 @@
 
 ## Überblick
 
-Detaillierte Finanzanalyse der Apple-Aktie (AAPL) über einen Zeitraum von 5 Jahren (2020–2025) in einem Jupyter Notebook. Das Notebook enthält ausgeführten Python-Code, deutsche Beschreibungen, statistische Analysen, Rendite- und Risikokennzahlen sowie interaktive Visualisierungen.
+Detaillierte Finanzanalyse der Apple-Aktie (AAPL) über einen Zeitraum von 5 Jahren (2020–2024) in einem Jupyter Notebook. Das Notebook enthält ausgeführten Python-Code, deutsche Beschreibungen, statistische Analysen, Rendite- und Risikokennzahlen sowie interaktive Visualisierungen.
 
 **Rahmenbedingungen:**
 - Unternehmen: Apple Inc. (AAPL)
@@ -27,7 +27,7 @@ Detaillierte Finanzanalyse der Apple-Aktie (AAPL) über einen Zeitraum von 5 Jah
 **Ziel:** AAPL-Rohdaten laden, bereinigen und erstmalig beschreiben.
 
 **Inhalte:**
-- `yfinance` Download: OHLCV-Daten (Open, High, Low, Close, Volume, Adj. Close)
+- `yfinance` Download: OHLCV-Daten für **AAPL** und **^GSPC** (S&P 500) gleichzeitig (01.01.2020 – 31.12.2024)
 - Überprüfung auf fehlende Werte und Datumslücken
 - Deskriptive Statistik (`.describe()`) mit Interpretation
 - Übersichtstabelle der ersten/letzten Datensätze
@@ -39,7 +39,7 @@ Detaillierte Finanzanalyse der Apple-Aktie (AAPL) über einen Zeitraum von 5 Jah
 **Ziel:** Preisentwicklung und Handelsvolumen visuell und statistisch untersuchen.
 
 **Inhalte:**
-- Interaktiver Kursverlauf (Schlusskurs 2020–2025) — Plotly Line Chart
+- Interaktiver Kursverlauf (Schlusskurs 2020–2024) — Plotly Line Chart
 - Handelsvolumen als Balkendiagramm
 - Simple Moving Averages: SMA 50 und SMA 200 (Trendindikator)
 - Bollinger Bands (20-Tage-Fenster, 2 Standardabweichungen)
@@ -69,7 +69,7 @@ Detaillierte Finanzanalyse der Apple-Aktie (AAPL) über einen Zeitraum von 5 Jah
 - Historische Volatilität annualisiert, rollierend (30 und 60 Tage) — Plot
 - Value at Risk (VaR): 95%- und 99%-Konfidenzniveau (historische Simulation)
 - Maximum Drawdown (größter Kursverlust vom Hochpunkt)
-- Sharpe Ratio (risikofreier Zinssatz: 4% p.a. für USD)
+- Sharpe Ratio (risikofreier Zinssatz: 4% p.a. → Tagesrate: `r_f_daily = 0.04 / 252`; berechnet auf Basis täglicher Renditen)
 - Beta gegenüber S&P 500 (^GSPC)
 - Korrelationsmatrix AAPL vs. S&P 500
 
@@ -130,12 +130,12 @@ financial-reporting-app/
 | Kategorie | Kennzahl | Methode |
 |-----------|----------|---------|
 | Rendite | Durchschnittsrendite täglich | Arithmetisches Mittel log. Renditen |
-| Rendite | Annualisierte Rendite | `(1 + r_tägl)^252 - 1` |
+| Rendite | Annualisierte Rendite | `exp(mean(log-Renditen) * 252) - 1` |
 | Rendite | Kumulative Rendite | `exp(sum(log-Renditen)) - 1` |
 | Rendite | Schiefe / Kurtosis | `scipy.stats` |
 | Risiko | Historische Volatilität | Std. log. Renditen × √252 |
-| Risiko | Value at Risk 95%/99% | Historische Simulation (Perzentile) |
-| Risiko | Maximum Drawdown | `(Tief - Hoch) / Hoch` |
-| Risiko | Sharpe Ratio | `(r_p - r_f) / σ_p` |
+| Risiko | Value at Risk 95%/99% | Historische Simulation: 5. Perzentil (VaR 95%), 1. Perzentil (VaR 99%) |
+| Risiko | Maximum Drawdown | `min((price / cummax(price)) - 1)` |
+| Risiko | Sharpe Ratio | `(mean(r_tägl) - r_f_daily) / std(r_tägl) * √252`; `r_f_daily = 0.04/252` |
 | Markt | Beta | Kovarianz(AAPL, GSPC) / Varianz(GSPC) |
 | Markt | Korrelation | Pearson-Korrelation der Renditen |
