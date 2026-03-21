@@ -16,3 +16,9 @@ einer geeigneten Quelle.
 zu berechnen und nehme geeignete Datenvisualisierungen vor.
 Hinweis: Bei dieser Aufgabe steht im Vordergrund, dass eine umfangreiche Menge von verschiedenen und
 hochwertigen Analysen, Kennzahlberechnungen und Visualisierungen vorgenommen wird.
+
+
+# Importieren der Daten
+Um Aktiendaten zu importieren, verwenden wir die Python-Bibliothek [yfinance](https://pypi.org/project/yfinance/), die eine komfortable Möglichkeit bietet, verschiedene Finanzdaten aus diversen Online-Quellen wie Yahoo Finance abzurufen und in einem Pandas DataFrame zu speichern. Anschließend wählen wir die Aktien (bzw. Ticker) aus, die wir analysieren möchten.
+
+![img.png](img.png)
