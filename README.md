@@ -20,5 +20,12 @@ hochwertigen Analysen, Kennzahlberechnungen und Visualisierungen vorgenommen wir
 
 # Importieren der Daten
 Um Aktiendaten zu importieren, verwenden wir die Python-Bibliothek [yfinance](https://pypi.org/project/yfinance/), die eine komfortable Möglichkeit bietet, verschiedene Finanzdaten aus diversen Online-Quellen wie Yahoo Finance abzurufen und in einem Pandas DataFrame zu speichern. Anschließend wählen wir die Aktien (bzw. Ticker) aus, die wir analysieren möchten.
+![Yfinance](img.png)
 
-![img.png](img.png)
+# Unternehmen: Apple Inc. (AAPL)
+
+Für diese Analyse wurde Apple Inc. (Ticker: AAPL) gewählt. Apple zählt zu den größten börsennotierten Unternehmen weltweit und hat globale Krisen wie die COVID-19-Pandemie erfolgreich überstanden. Der Analysezeitraum umfasst die Jahre 2020–2024 und eignet sich damit gut, um sowohl Krisenreaktionen als auch langfristige Wachstumstrends zu untersuchen.
+
+Der folgende Chart zeigt den adjustierten Schlusskurs von AAPL über den gesamten Betrachtungszeitraum:
+
+![Adjustierter Schlusskurs AAPL](adjust_line_chart.png)
