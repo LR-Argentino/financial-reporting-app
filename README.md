@@ -24,7 +24,7 @@ Um Aktiendaten zu importieren, verwenden wir die Python-Bibliothek [yfinance](ht
 
 # Unternehmen: Apple Inc. (AAPL)
 
-Für diese Analyse wurde Apple Inc. (Ticker: AAPL) gewählt. Apple zählt zu den größten börsennotierten Unternehmen weltweit und hat globale Krisen wie die COVID-19-Pandemie erfolgreich überstanden. Der Analysezeitraum umfasst die Jahre 2020–2024 und eignet sich damit gut, um sowohl Krisenreaktionen als auch langfristige Wachstumstrends zu untersuchen.
+Für diese Analyse wurde Apple Inc. (Ticker: AAPL) gewählt. Apple zählt zu den größten börsennotierten Unternehmen weltweit und hat globale Krisen wie die COVID-19-Pandemie erfolgreich überstanden. Der Analysezeitraum umfasst die Jahre 2019–2024 und eignet sich damit gut, um sowohl Krisenreaktionen als auch langfristige Wachstumstrends zu untersuchen.
 
 Der folgende Chart zeigt den adjustierten Schlusskurs von AAPL über den gesamten Betrachtungszeitraum:
 
