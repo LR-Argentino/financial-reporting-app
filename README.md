@@ -29,3 +29,15 @@ Für diese Analyse wurde Apple Inc. (Ticker: AAPL) gewählt. Apple zählt zu den
 Der folgende Chart zeigt den adjustierten Schlusskurs von AAPL über den gesamten Betrachtungszeitraum:
 
 ![Adjustierter Schlusskurs AAPL](adjust_line_chart.png)
+
+## Tägliche Renditen
+
+Der folgende Chart zeigt die täglichen prozentualen Renditen von AAPL im Zeitraum 2019–2024. Die Renditen schwanken überwiegend in einem Bereich von ±3 %, was auf eine relativ stabile Kursentwicklung hindeutet. Besonders auffällig sind die starken Ausschläge Anfang 2020, die durch den COVID-19-bedingten Marktschock verursacht wurden und Extremwerte von über ±10 % erreichten. Ab 2021 normalisierte sich die Volatilität wieder deutlich, blieb aber mit vereinzelten Spitzen bis ±6 % weiterhin spürbar.
+
+![Tägliche Renditen AAPL](daily_returns.png)
+
+## Maximum Drawdown
+
+Der folgende Chart zeigt den Drawdown von AAPL im Zeitraum 2019–2024, also den prozentualen Rückgang vom jeweils erreichten Höchststand. Der stärkste Einbruch ereignete sich Anfang 2020 im Zuge der COVID-19-Pandemie mit einem Drawdown von knapp −30 %. Nach einer raschen Erholung folgten weitere ausgeprägte Rückgänge: Ende 2020/Anfang 2021 sowie 2022 mit Werten um −25 % bis −27 %. Den tiefsten Punkt im gesamten Betrachtungszeitraum erreichte die Aktie Anfang 2023 mit rund −30 %. Ab Mitte 2023 erholte sich der Kurs merklich, mit deutlich flacheren Drawdown-Phasen in 2024.
+
+![Maximum Drawdown AAPL](mdd.png)
